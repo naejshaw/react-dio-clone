@@ -41,7 +41,7 @@ export const Title = styled.h2`
     color: #FFFFFF;
 `
 
-export const TitleLogin = styled.p`
+export const TitleRegister = styled.p`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
@@ -50,7 +50,7 @@ export const TitleLogin = styled.p`
     line-height: 44px;
 `
 
-export const SubtitleLogin = styled.p`
+export const SubtitleRegister = styled.p`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
@@ -59,7 +59,7 @@ export const SubtitleLogin = styled.p`
     line-height: 25px;
 `
 
-export const ForgotText = styled.p`
+export const HaveAccountText = styled.p`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
@@ -68,3 +68,5 @@ export const ForgotText = styled.p`
 
     color: #e5e044;
 `
+
+

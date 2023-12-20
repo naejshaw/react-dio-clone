@@ -1,19 +1,19 @@
 import {useNavigate} from "react-router-dom"
-import {MdEmail, MdLock} from 'react-icons/md'
+import {MdEmail, MdLock, MdPerson} from 'react-icons/md'
 import {Button} from "../../components/Button"
 import {Header} from '../../components/Header'
 import {Input} from '../../components/Input'
 
-import {Column, Container, ForgotText, Row, SubtitleLogin, Title, TitleLogin, Wrapper} from './styles'
-const Login = () => {
+import {Column,Container,HaveAccountText,Row,SubtitleRegister,Title,TitleRegister,Wrapper} from './styles'
+const Register = () => {
     const navigate = useNavigate()
 
     const handleClickSignIn = () => {
         navigate('/feed')
     }
 
-    const handleClickRegister = () => {
-        navigate('/register')
+    const handleClickLogin = () => {
+        navigate('/login')
     }
 
 
@@ -27,16 +27,17 @@ const Login = () => {
             </Column>
             <Column>
                 <Wrapper>
-                    <TitleLogin>Faça seu cadastro</TitleLogin>
-                    <SubtitleLogin>Faça seu cadastro e make the change._</SubtitleLogin>
+                    <TitleRegister>Faça seu cadastro</TitleRegister>
+                    <SubtitleRegister>Faça seu cadastro e make the change._</SubtitleRegister>
                     <form>
+                        <Input placeholder="Nome Completo" leftIcon={<MdPerson />} name="text" />
                         <Input placeholder="E-mail" leftIcon={<MdEmail />} name="email" />
                         <Input type="password" placeholder="Senha" leftIcon={<MdLock />}  name="senha" />
-                        <Button title="Entrar" variant="secondary" onClick={handleClickSignIn}/>
+                        <Button title="Criar Conta" variant="secondary" onClick={handleClickSignIn}/>
                     </form>
                     <Row>
-                        <ForgotText>Esqueci minha senha</ForgotText>
-                        <Button title="Criar Conta" variant="primary" onClick={handleClickRegister}/>
+                        <HaveAccountText>Já tenho conta</HaveAccountText>
+                        <Button title="Entrar" onClick={handleClickLogin} />
                     </Row>
                 </Wrapper>
             </Column>
@@ -44,4 +45,4 @@ const Login = () => {
     </>)
 }
 
-export {Login}
+export {Register}
