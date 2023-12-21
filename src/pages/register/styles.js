@@ -14,7 +14,7 @@ export const Container = styled.main`
 `
     
 export const Wrapper = styled.div`
-    max-width: 300px;
+    max-width: fit-content;
 `
     
 export const Column = styled.div`
